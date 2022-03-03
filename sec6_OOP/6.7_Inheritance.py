@@ -35,3 +35,6 @@ print(archer1.attack())
 print(isinstance(wizard1, User))
 print(isinstance(wizard1, Wizard))
 print(isinstance(wizard1, object))  # base class python comes with
+
+# polymorphism: though the method name is the same "attack", the instance
+# have different behaviors
