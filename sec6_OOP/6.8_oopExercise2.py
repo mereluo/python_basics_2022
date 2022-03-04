@@ -20,12 +20,12 @@ class Cat():
         return f'{self.name} is just walking around'
 
 
-class Simon(Cat):
+class Simon(Cat):  # <<
     def sing(self, sounds):
         return f'{sounds}'
 
 
-class Sally(Cat):
+class Sally(Cat):  # <<
     def sing(self, sounds):
         return f'{sounds}'
 

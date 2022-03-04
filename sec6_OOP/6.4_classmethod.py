@@ -10,11 +10,11 @@ class PlayerCharacter:
         print(f'my name is {self.name}')
         return 'done'
 
-    @classmethod
+    @classmethod  # <<
     def adding_things(cls, num1, num2):  # cls: class
         return cls('Teddy', num1 + num2)
 
-    @staticmethod
+    @staticmethod  # <<
     def adding_things2(num1, num2):  # don't care about class
         return num1 + num2
 

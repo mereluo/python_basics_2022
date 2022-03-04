@@ -1,7 +1,7 @@
 class PlayerCharacter:
     def __init__(self, name, age):
-        self._name = name
-        self._age = age
+        self._name = name  # <<
+        self._age = age  # <<
 
     def speak(self):
         print(f'my name is {self.name}, and I '

@@ -2,8 +2,8 @@ class PlayerCharacter:
     # Class Object Attribute - doesn't change
     membership = True
 
-    def __init__(self, name="anonymous", age=19):
-        if (age > 18):
+    def __init__(self, name="anonymous", age=19):  # << default value
+        if (age > 18):  # <<
             self.name = name  # self refer to player1
             self.age = age  # attributes - change
 

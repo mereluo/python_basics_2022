@@ -1,6 +1,9 @@
 # Users: wizards, archers... all of them have to sign in
 
 class User:
+    def __init__(self, email):  # <<
+        self.email = email
+
     def sign_in(self):
         return 'Logged in'
     # we don't need user attributes
@@ -9,7 +12,9 @@ class User:
 
 
 class Wizard(User):  # <<
-    def __init__(self, name, power):
+    def __init__(self, name, power, email):
+        # User.__init__(self, email)  # << (1)
+        super().__init__(email)  # << (2)
         self.name = name
         self.power = power
 
@@ -26,15 +31,6 @@ class Archer(User):  # <<
         return f'attacking with arrows: arrows left: {self.num_arrows}'
 
 
-wizard1 = Wizard('Merlin', 50)
-archer1 = Archer('Robin', 100)
-print(wizard1.sign_in())
-print(wizard1.attack())
-print(archer1.attack())
-
-print(isinstance(wizard1, User))
-print(isinstance(wizard1, Wizard))
-print(isinstance(wizard1, object))  # base class python comes with
-
-# polymorphism: though the method name is the same "attack", the instance
-# have different behaviors
+Merlin = Wizard('Merlin', 100, 'merlin@gmail.com')
+print(Merlin.email)
+print(dir(Merlin))  # << object introspection
